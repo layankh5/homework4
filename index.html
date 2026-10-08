@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            font-family: sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* hero style */
+
+        .hero {
+            background-image: url(hero\ pic.jpg);
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
+
+        }
+
+        .hero nav {
+            width: 100%;
+            height: 50px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            padding-top: 10px;
+
+
+
+        }
+
+        nav .second {
+            margin-right: 520px;
+            margin-left: 2px;
+
+        }
+
+        nav a {
+            text-decoration: none;
+            color: gray;
+            margin: 10px;
+
+        }
+
+        nav a:hover {
+            background-color: rgb(37, 118, 249);
+            color: white;
+            border-radius: 15px;
+            transition: 1s;
+        }
+
+        .content {
+            padding-left: 100px;
+            padding-top: 100px;
+            color: white;
+        }
+
+        .content h1 {
+            color: rgb(37, 118, 249);
+            font-size: 50px;
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+
+        .content button {
+            width: 150px;
+            height: 40px;
+            padding: 5px 5px;
+            background-color: rgb(37, 118, 249);
+            color: white;
+            border: none;
+            border-radius: 7px;
+            margin: 20px;
+            font-weight: bold;
+            cursor: pointer;
+
+        }
+
+        .content button:hover {
+            transform: scaleX(1.1);
+            background-color: rgba(37, 118, 249, 0.599);
+            transition: 1s;
+        }
+
+        .icons {
+            display: flex;
+
+
+        }
+
+        .icons a {
+            text-decoration: none;
+            color: white;
+            font-size: large;
+            margin: 10px;
+        }
+
+        /* service style */
+        .services {
+            width: 100%;
+            height: 100vh;
+            text-align: center;
+            color: rgb(37, 118, 249);
+
+        }
+
+        .services h1,
+        .contact h1 {
+            margin-top: 100px;
+            margin-bottom: 70px;
+            color: rgb(37, 118, 249);
+        }
+
+        .services .cards,
+        .contact .cards {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 30px;
+        }
+
+        .services .card {
+            height: 300px;
+
+            text-align: center;
+            font-size: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.08);
+            padding: 10px;
+            font-weight: bold;
+
+
+
+        }
+
+        .services .card i {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .services .card p {
+            color: black;
+            font-size: 10px;
+            margin-top: 10px;
+            line-height: 30px;
+        }
+
+        /* pro style */
+        .projects {
+            width: 100%;
+            height: 100vh;
+            text-align: center;
+            background-color: rgb(4, 4, 99);
+        }
+
+        .projects .cards {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+            gap: 30px;
+            padding: 10px;
+        }
+
+        .projects .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            width: 230px;
+            font-size: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.08);
+            background-color: white;
+        }
+
+        .projects h1 {
+            margin-top: 100px;
+            color: white;
+        }
+
+        .projects .card img {
+            width: 200px;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+
+        .projects .line {
+            display: flex;
+            gap: 20px;
+        }
+
+        .projects .card .details {
+            display: flex;
+            color: black;
+            font-size: 7px;
+            margin-top: 10px;
+
+            gap: 100px;
+
+        }
+
+        .projects .card p {
+            margin-top: 2px;
+            margin-right: auto;
+            margin-left: 10px;
+
+        }
+
+        /* contact style */
+
+        .contact {
+            width: 100%;
+            height: 100vh;
+            text-align: center;
+
+
+        }
+
+
+        .contact .card {
+            height: 200px;
+            width: 200px;
+            text-align: center;
+            font-size: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.08);
+            padding: 10px;
+
+        }
+
+        .contact .card i {
+
+            font-size: 70px;
+            margin-bottom: 10px;
+            color: rgb(37, 118, 249);
+
+        }
+
+        .contact .card p {
+            font-size: 13px;
+            margin-top: 10px;
+            line-height: 30px;
+            font-weight: 0;
+
+        }
+
+        footer {
+            width: 100%;
+            height: 80px;
+            background-color: rgb(5, 5, 58);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 10px;
+
+
+        }
+
+        footer .second {
+            margin-right: 520px;
+            margin-left: 2px;
+
+
+
+        }
+
+
+        .controller {
+            padding: 10px;
+            border-radius: 50%;
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background-color: rgb(37, 118, 249);
+            ;
+        }
+
+        @media screen and (max-width:768px) {
+
+
+
+            nav {
+                margin-top: 20px;
+                width: 100%;
+                height: 50px;
+
+
+
+            }
+
+            nav a {
+                margin: 5px;
+                font-size: 16px;
+
+            }
+
+            .content {
+                margin-top: 100px;
+            }
+
+            .centent h1 {
+                font-size: 30px;
+            }
+
+
+
+
+
+            .services .card {
+                height: 300px;
+                width: 150px;
+                text-align: center;
+                font-size: 3px;
+                border-radius: 10px;
+                box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.08);
+                padding: 10px;
+                font-weight: bold;
+
+
+
+            }
+
+            .services .card p {
+                color: black;
+                font-size: 10px;
+                margin-top: 10px;
+
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero">
+
+        <nav>
+            <h1 class="first" style="color: rgb(37, 118, 249);">Layan</h1>
+            <h1 class="second" style="color: gray;">Khaldoon</h1>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="content">
+
+            <h3> Hello,I am Layan!</h3>
+            <h1>A software Engineer</h1>
+            <h2>I build a magical software</h2>
+            <button>View my work</button>
+            <div class="icons">
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h1>Services</h1>
+        <div class="cards">
+
+            <div class="card">
+                <i class="fa-solid fa-pen-to-square"></i>
+                <h2>service1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br> Harum exercitationem perspiciatis
+                    distinctio fugiat animi <br>corporis beatae? Repell,</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-video"></i>
+                <h2>service2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br> Harum exercitationem perspiciatis
+                    distinctio fugiat animi <br>corporis beatae? Repell,</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h2>service3</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br> Harum exercitationem perspiciatis
+                    dis<br>tinctio fugiat animi <br>corporis beatae? Repell,</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+
+        <h1 style="margin-top: 50px;">Projects</h1>
+        <div class="cards">
+            <div class="line">
+                <div class="card">
+                    <img src="geralt-blockchain-8008051_1920.jpg">
+                    <p>project1</p>
+                    <div class="details">
+                        <h2>dev books</h2>
+                        <a href="#">more details</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="yatsusimnetcojp-coding-4570799_1920.jpg">
+                    <p>project1</p>
+                    <div class="details">
+                        <h2>dev books</h2>
+                        <a href="#">more details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="line">
+                <div class="card">
+                    <img src="jamesmarkosborne-code-1076536_1920.jpg">
+                    <p>project1lkjffdfgfhgj</p>
+                    <div class="details">
+                        <h2>dev books</h2>
+                        <a href="#">more details</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="pexels-technology-1283624_1920.jpg">
+                    <p>project1</p>
+                    <div class="details">
+                        <h2>dev books</h2>
+                        <a href="#">more details</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="contact" class="contact">
+        <h1>Let's work together</h1>
+        <div class="cards">
+
+            <div class="card">
+                <i class="fa-solid fa-phone"></i>
+                <h2>phone</h2>
+                <p>07777777####</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-envelope"></i>
+                <h2>Email</h2>
+                <p>khaldoonlayan5@gmail.com</p>
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        <h2 class="first" style="color: rgb(37, 118, 249);">copyrights @</h2>
+        <h2 class="second" style="color: gray;"> layan Khaldoon</h2>
+        <div class="icons">
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+
+    </footer>
+
+    <a href="#">
+        <div class="controller">
+            <i class="fa-solid fa-arrow-up" style="color: white;"></i>
+        </div>
+
+</body>
+
+</html>
